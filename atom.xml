@@ -1,0 +1,31 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <id>http://www.bashtips.org/</id>
+  <link href="http://www.bashtips.org/atom.xml" rel="self"/>
+  <link href="http://www.bashtips.org/"/>
+  <title>Bash Tips</title>
+  <subtitle>Tips for using the GNU Bourne-Again SHell.</subtitle>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <author>
+    <name>Bash Tips</name>
+    <uri>http://www.bashtips.org/</uri>
+  </author>
+
+{% for post in site.posts %}
+  <entry>
+    <id>http://www.bashtips.org{{ post.id }}</id>
+    <link href="http://www.bashtips.org{{ post.url }}"/>
+    <title>{{ post.title }}</title>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>{{ post.author.name }}</name>
+      <uri>{{ post.author.uri }}</uri>
+    </author> 
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+{% endfor %}
+
+</feed>

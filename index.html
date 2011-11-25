@@ -1,0 +1,39 @@
+---
+layout: default
+title: Bash Tips
+---
+{% for post in site.posts limit: site.archive_offset %}
+  <article>
+    <header>
+      <hgroup>
+        <h1>
+          <a href="{{ post.url}}">{{ post.title }}</a>
+        </h1>
+        <h2>
+          by <a href="{{ post.author.url }}">{{ post.author.name }}</a> on 
+          <time datetime="{{ post.date | date_to_xmlschema }}" pubDate="pubDate">
+            {{ post.date | date_to_string }}
+          </time>
+        </h2>
+      </hgroup>
+    </header>
+    {{ post.content }}
+  </article>
+{% endfor %}
+{% if site.posts.size > site.archive_offset %}
+  <section class="archive">
+    <header>
+      <h1>Archive</h1>
+    </header>
+    <ul>
+    {% for post in site.posts offset: site.archive_offset %}
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date_to_string }}
+        </time>
+        » <a href="{{ post.uri }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+{% endif %}

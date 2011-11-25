@@ -1,0 +1,110 @@
+---
+---
+html, body {
+  background: #FFF;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+body {
+  max-width: 630px;
+  margin: 0 auto;
+  font: 1em Helvetica, Arial, Verdana, sans-serif;
+}
+h1, h2, ul {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #369;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+ul {
+  list-style-type: none;
+}
+body > header hgroup {
+  margin: 2em 0 2em;
+  h1 {
+    background: url("/images/application_osx_terminal.png") no-repeat left center;
+    padding-left: 20px;
+    font-size: 24px;
+    a {
+      text-decoration: none;
+      color: #333;
+      &:hover {
+        text-decoration: none; 
+      }
+    }
+  }
+  h2 {
+    font-size: .9em;
+    font-weight: normal;
+  }
+}
+article {
+  margin: 0 0 2em;
+  header hgroup {
+    margin-bottom: .8em;
+    h1 {
+      font-size: 1.5em;
+      a {
+        color: #333;
+        text-decoration: none;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    h2 {
+      font-size: .8em;
+      font-weight: normal;
+      a {
+        color: inherit;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }
+  p {
+    margin: 0 0 1em;
+    > code {
+      padding: 0 2px;
+    }
+  }
+  pre, code {
+    font: .9em "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, monospace;
+    background-color: #EEE;
+  }
+  pre {
+    margin: 0 0 1em;
+    padding: 7px;
+    overflow: auto;
+  }
+}
+section.archive {
+  header h1 {
+    font-size: 1.2em;
+    margin: 0 0 1em;
+  }
+  ul li {
+    margin: 1em 0;
+  }
+}
+footer {
+  border-top: 1px solid #CCC;
+  margin: 2em 0 2em;
+  font-size: .8em;
+  padding: 10px 0;
+  nav {
+    ul li {
+      display: inline;
+      &+ li::before {
+        padding: 0 6px;
+        content: "\0020\2022\0020";
+      }
+    }
+  }
+}

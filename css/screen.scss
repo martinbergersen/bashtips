@@ -25,23 +25,25 @@ a {
 ul {
   list-style-type: none;
 }
-body > header hgroup {
+body > header {
   margin: 2em 0 2em;
-  h1 {
-    background: url("/images/application_osx_terminal.png") no-repeat left center;
-    padding-left: 20px;
-    font-size: 24px;
-    a {
-      text-decoration: none;
-      color: #333;
-      &:hover {
-        text-decoration: none; 
+  hgroup {
+    h1 {
+      background: url("/images/application_osx_terminal.png") no-repeat left center;
+      padding-left: 20px;
+      font-size: 24px;
+      a {
+        text-decoration: none;
+        color: #333;
+        &:hover {
+          text-decoration: none; 
+        }
       }
     }
-  }
-  h2 {
-    font-size: .9em;
-    font-weight: normal;
+    h2 {
+      font-size: .9em;
+      font-weight: normal;
+    }
   }
 }
 article {
